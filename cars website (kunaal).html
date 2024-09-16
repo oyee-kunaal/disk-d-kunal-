@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cars</title>
+</head>
+<body>
+	<h1>Cars</h1>
+	<form>
+		<label for="car-search">Search Cars:</label>
+		<input type="search" id="car-search" name="car-search">
+		<button type="button" onclick="searchCars()">Search</button>
+	</form>
+	
+	<div id="car-results"></div>
+	
+	<script>
+		const cars = [
+			{
+				brand: "Mahindra",
+				model: "Thar",
+				year: 2022,
+				price: 1200000,
+				specs: ["4WD", "Diesel", "Manual"]
+			},
+			{
+				brand: "Tata",
+				model: "Nexon",
+				year: 2022,
+				price: 1000000,
+				specs: ["2WD", "Petrol", "Automatic"]
+			},
+			{
+				brand: "Toyota",
+				model: "Fortuner",
+				year: 2022,
+				price: 2500000,
+				specs: ["4WD", "Diesel", "Automatic"]
+			},
+			{
+				brand: "Ford",
+				model: "EcoSport",
+				year: 2022,
+				price: 900000,
+				specs: ["2WD", "Petrol", "Manual"]
+			},
+			{
+				brand: "Honda",
+				model: "City",
+				year: 2022,
+				price: 1100000,
+				specs: ["2WD", "Petrol", "Automatic"]
+			},
+			// Add more cars here
+		];
+		
+		function searchCars() {
+			const searchQuery = document.getElementById("car-search").value.toLowerCase();
+			const resultsHTML = "";
+			cars.forEach((car) => {
+				if (car.brand.toLowerCase().includes(searchQuery) || car.model.toLowerCase().includes(searchQuery)) {
+					resultsHTML += `
+						<h2>${car.brand} ${car.model}</h2>
+						<p>Year: ${car.year}</p>
+						<p>Price: ₹${car.price}</p>
+						<p>Specifications: ${car.specs.join(", ")}</p>
+						<hr>
+					`;
+				}
+			});
+			document.getElementById("car-results").innerHTML = resultsHTML;
+		}
+	</script>
+</body>
+</html>

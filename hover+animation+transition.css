@@ -1,0 +1,66 @@
+body{
+    display: inline-block;
+}
+
+
+.box1{
+margin: 50px;
+    height: 500px;
+width: 500px;
+background: yellowgreen;
+/* transition-property:backgound=color; */
+transition: .9s;
+}
+.box1:hover{
+    background:url(burgir.jpg);
+    border-radius: 25%;
+    background-size: cover;
+    transition: 2s;
+
+    
+}
+.box1 h1{
+    text-align: center;
+    padding-top: 230px;
+}
+
+.box2{
+    margin: 50px;
+        height: 500px;
+    width: 500px;
+    background: rgb(6, 27, 87);
+    align-items: center;
+    text-align: center;
+    transition: .9s;
+    
+    }
+    .box2:hover{
+        background:rgb(255, 0, 0);
+        border-radius: 25%;
+        background-size: cover;
+        /* transition-delay: 1s; */
+        transform:rotate(180deg) ;
+    }
+    .box2 h1{
+        text-align: center;
+        padding-top: 230px;
+    }
+
+    .box3{
+        margin: 50px;
+            height: 500px;
+        width: 500px;
+        background: rgb(216, 118, 57);
+        align-items: center;
+        text-align: center;
+        transition: 2s;
+        }
+        .box3:hover{
+            background:greenyellow;
+            border-radius: 25%;
+            background-size: cover;
+        }
+        .box3 h1{
+            text-align: center;
+            padding-top: 230px;
+        }
